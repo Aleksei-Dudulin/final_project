@@ -46,19 +46,7 @@ string[] CreateNewArray(string[] array)
         Array.Resize(ref newArray, count);
     return newArray;
 }
-/*
-void RunProgram()
-{
-    int n = Convert.ToInt32(Console.ReadLine());    
-    Console.WriteLine();
-    string[] myArray = new string[n];
-    CreateArray(myArray);
-    Console.Write("\nYour input array: ");
-    ShowArray(myArray);
-    Console.Write("Array, after program runing: ");
-    ShowArray(CreateNewArray(myArray));
-}
-*/
+
 Console.Write("Input quantity strings of array: ");
 int n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
