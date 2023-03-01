@@ -4,15 +4,26 @@
 
 void CreateNewArray(string[] array)
 {    
-    for (int i = 0; i < array.Length; i++)
+    for(int i = 0; i < array.Length; i++)
     {
         Console.Write($"Input {i + 1} element of array: ");
         string temp = new string(Console.ReadLine());
-        if (String.IsNullOrWhiteSpace(temp))
+        if(String.IsNullOrWhiteSpace(temp))
         {
             Console.WriteLine("Value is empty or null, please, re-input");
             i -= 1;
         }
         else array[i] = temp;
     }
+}
+
+void ShowArray(string[] array)
+{
+    Console.Write("[");
+    for(int i = 0; i < array.Length; i++)
+        if(i == (array.Length - 1))
+            Console.Write($"\"{array[i]}\"");
+        else
+            Console.Write($"\"{array[i]}\", ");
+    Console.WriteLine("]");
 }
