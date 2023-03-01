@@ -34,8 +34,6 @@ string[] CreateNewArray(string[] array)
     string[] newArray = new string[array.Length];
     for(int i = 0; i < array.Length; i++)
     {
-        char[] splitToChars = array[i].ToCharArray();
-        if(splitToChars.Length <= 3)
         if(array[i].Length <= 3) 
         {
             newArray[count]= array[i];
@@ -53,7 +51,7 @@ Console.WriteLine();
 if(n<0) n*=(-1);
 string[] myArray = new string[n];
 CreateArray(myArray);
-Console.Write("\nYour input array: ");
+Console.Write("Initial array: ");
 ShowArray(myArray);
-Console.Write("Array, after program runing: ");
+Console.Write("Modified array: ");
 ShowArray(CreateNewArray(myArray));
